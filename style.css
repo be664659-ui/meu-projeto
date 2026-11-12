@@ -1,0 +1,807 @@
+
+/* Configuração geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050b18;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Menu */
+header {
+    background: #08152b;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00bfff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00bfff;
+}
+
+/* Seções */
+section {
+    background: #101e35;
+    margin: 30px auto;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 900px;
+    border: 1px solid #183c63;
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #007bff55;
+}
+
+h1 {
+    font-size: 42px;
+    color: #00bfff;
+}
+
+h2 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+/* Botões */
+.botao {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #00bfff;
+    transform: scale(1.05);
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    section {
+        margin: 15px;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    nav a {
+        display: inline-block;
+    }
+}
+
+/* Área dos projetos */
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* Cartões */
+.projeto-card {
+    background: #08152b;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #007bff;
+    transition: 0.3s;
+}
+
+/* Animação ao passar o mouse */
+.projeto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #007bff;
+}
+
+/* Título dos cartões */
+.projeto-card h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+/* Texto dos cartões */
+.projeto-card p {
+    color: #cbd5e1;
+}
+
+/* Aviso de projeto futuro */
+.em-breve {
+    display: inline-block;
+    background: #263750;
+    color: #cbd5e1;
+    padding: 12px 25px;
+    border-radius: 8px;
+}
+
+/* Ajuste para celular */
+@media (max-width: 600px) {
+    .projetos-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Seção de basquete */
+.basquete-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* Cartões de basquete */
+.basquete-card {
+    background: #08152b;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #007bff;
+    transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.basquete-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #007bff;
+}
+
+/* Títulos */
+.basquete-card h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+/* Textos */
+.basquete-card p {
+    color: #cbd5e1;
+}
+
+/* Versão para celular */
+@media (max-width: 600px) {
+    .basquete-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Área de contato */
+.contato-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* Botões de contato */
+.contato-botao {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Animação dos botões */
+.contato-botao:hover {
+    background: #00bfff;
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #007bff;
+}
+
+/* Ajuste para celular */
+@media (max-width: 600px) {
+    .contato-container {
+        flex-direction: column;
+    }
+
+    .contato-botao {
+        text-align: center;
+    }
+}
+
+/* Botão para mudar o tema */
+.botao-tema {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 15px;
+    transition: 0.3s;
+}
+
+.botao-tema:hover {
+    background: #00bfff;
+    transform: scale(1.05);
+}
+
+/* Tema claro */
+body.tema-claro {
+    background: #e8f1ff;
+    color: #111827;
+}
+
+.tema-claro header,
+.tema-claro footer {
+    background: #dbeafe;
+    color: #111827;
+}
+
+.tema-claro section {
+    background: white;
+    color: #111827;
+}
+
+.tema-claro section p {
+    color: #334155;
+}
+
+.tema-claro nav a {
+    color: #1e3a8a;
+}
+
+.tema-claro .projeto-card,
+.tema-claro .basquete-card {
+    background: #eff6ff;
+    color: #111827;
+}
+
+.tema-claro .projeto-card p,
+.tema-claro .basquete-card p {
+    color: #334155;
+}
+
+/* Animação ao rolar a página */
+section {
+    opacity: 0;
+    transform: translateY(80px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Quando a seção aparece */
+section.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respeitar preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    section {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* Menu fixo no topo */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Evitar que o menu cubra os títulos */
+section {
+    scroll-margin-top: 160px;
+}
+
+/* Destaque do link ativo */
+nav a.ativo {
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 5px;
+}
+
+/* Efeito suave nos links */
+nav a {
+    transition: color 0.3s ease;
+}
+
+/* Ajuste para celular */
+@media (max-width: 600px) {
+    header {
+        padding: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 5px;
+    }
+}
+
+/* Botão do menu mobile */
+.menu-toggle {
+    display: none;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Configurações para celular */
+@media (max-width: 600px) {
+
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    #menu-navegacao {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    #menu-navegacao.aberto {
+        display: flex;
+    }
+
+    #menu-navegacao a {
+        display: block;
+        padding: 10px;
+        background: #172744;
+        border-radius: 8px;
+        color: white;
+    }
+
+    #menu-navegacao a:hover {
+        background: #007bff;
+    }
+}
+
+/* Botão de voltar ao topo */
+
+#voltar-topo {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    background: #00bfff;
+    color: #000;
+
+    border: none;
+    border-radius: 50%;
+
+    width: 55px;
+    height: 55px;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#voltar-topo {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: #00bfff;
+    color: black;
+    font-size: 28px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
+
+#voltar-topo.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+#voltar-topo:hover {
+    background: white;
+    box-shadow: 0 0 20px #00bfff;
+}
+/* SEÇÃO DE PROJETOS */
+
+.lista-projetos {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
+
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card-projeto {
+    background: #101c35;
+    border: 1px solid #00cfff;
+    border-radius: 15px;
+    padding: 25px;
+
+    box-shadow: 0 0 15px #00cfff22;
+
+    transition: transform 0.3s,
+                box-shadow 0.3s;
+}
+
+.card-projeto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #00cfff66;
+}
+
+.card-projeto h3 {
+    color: #00d9ff;
+    margin-bottom: 15px;
+}
+
+.card-projeto p {
+    color: #d1d5db;
+    line-height: 1.6;
+}
+
+.card-projeto a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+
+    background: #00cfff;
+    color: #06111f;
+
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.card-projeto a:hover {
+    background: #75eaff;
+}
+
+.card-projeto span {
+    display: inline-block;
+    margin-top: 15px;
+    color: #8bb6ce;
+}
+/* ANIMAÇÃO DE ENTRADA */
+
+.animar-entrada {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease,
+                transform 0.8s ease;
+}
+
+.animar-entrada.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animar-entrada {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+
+
+/* ELEMENTO VISÍVEL */
+
+.animar-entrada {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease,
+                transform 0.8s ease;
+}
+
+.animar-entrada.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animar-entrada {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+    .animar-entrada {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+/* EFEITO DE DIGITAÇÃO */
+
+#texto-digitando {
+    color: #38bdf8;
+    font-weight: bold;
+    border-right: 3px solid #38bdf8;
+    padding-right: 5px;
+    animation: cursor 0.7s infinite;
+}
+
+@keyframes cursor {
+    0%, 100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #38bdf8;
+    }
+}
+/* AULA 26 - SITE RESPONSIVO */
+
+/* TABLETS E CELULARES */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main section {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .card-projeto {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    main section {
+        padding: 30px 15px;
+    }
+
+    .botao {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+/* AJUSTES FINAIS PARA CELULAR */
+
+@media (max-width: 480px) {
+
+    .card-projeto {
+        padding: 20px;
+        margin: 10px auto;
+    }
+
+    main section {
+        padding: 25px 15px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+/* AULA 27 - VISUAL PROFISSIONAL */
+
+/* ILUMINAÇÃO SUAVE NO FUNDO */
+body {
+    background-image:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(0, 153, 255, 0.12),
+            transparent 35%
+        );
+    background-attachment: fixed;
+}
+
+/* CARTÕES MODERNOS */
+.card-projeto {
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.card-projeto:hover {
+    transform: translateY(-8px);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+/* BOTÕES MAIS BONITOS */
+.botao {
+    border-radius: 10px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 20px
+        rgba(56, 189, 248, 0.35);
+}
+
+/* TÍTULOS COM DESTAQUE */
+main h2 {
+    text-shadow:
+        0 0 15px rgba(56, 189, 248, 0.25);
+}
+
+/* AJUSTES PARA CELULARES */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .card-projeto:hover {
+        transform: none;
+    }
+}
+
+/* ACESSIBILIDADE */
+@media (prefers-reduced-motion: reduce) {
+    .card-projeto,
+    .botao {
+        transition: none;
+    }
+}
+/* AULA 28 - PROJETOS */
+
+.lista-projetos {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.lista-projetos .card-projeto {
+    min-width: 0;
+    padding: 25px;
+}
+
+.lista-projetos h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.lista-projetos p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.em-breve {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #1e293b;
+    color: #cbd5e1;
+    font-weight: bold;
+}
+
+/* VERSÃO CELULAR */
+
+@media (max-width: 768px) {
+    .lista-projetos {
+        grid-template-columns: 1fr;
+    }
+}
+/* CENTRALIZAR O CABEÇALHO */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}

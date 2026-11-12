@@ -1,12 +1,195 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Meu Projeto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Meu primeiro site!</h1>
-    <p>Estou aprendendo programação!</p>
-    <p>eu gosto de jogar basquete</p>
+  <header>
+    <h2>Meu Portfólio</h2>
+
+    <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menu-navegacao">
+        ☰
+    </button>
+
+    <nav id="menu-navegacao">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre mim</a>
+        <a href="#basquete">Basquete</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <button onclick="mudarTema()" class="botao-tema">
+        ☀️ Mudar tema
+    </button>
+</header>
+
+
+
+    <main>
+        <section id="inicio">
+            <h1>Olá, eu sou um futuro programador!</h1>
+            <h2>
+    Eu sou <span id="texto-digitando"></span>
+</h2>
+            <p>Aprendendo HTML, CSS e JavaScript.</p>
+            <a href="#sobre" class="botao">Conheça minha história</a>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+            <p>Estou aprendendo programação e quero
+            construir projetos incríveis.</p>
+        </section>
+
+        <section id="basquete">
+            
+<section id="basquete">
+
+    <h2>🏀 Minha paixão pelo basquete</h2>
+
+    <p>
+      🏀 O basquete é mais do que um esporte para mim, é uma paixão que me motiva a evoluir todos os dias. Cada treino, cada partida e cada desafio são oportunidades de superar meus limites, fortalecer minha disciplina e buscar minha melhor versão dentro e fora das quadras.
+    </p>
+
+    <div class="basquete-container">
+
+        <div class="basquete-card">
+            <h3>🏆 Competição</h3>
+            <p>
+                Gosto de jogar partidas
+                e melhorar minhas habilidades.
+            </p>
+        </div>
+
+        <div class="basquete-card">
+            <h3>🎯 Evolução</h3>
+            <p>
+                Cada treino é uma oportunidade
+                de evoluir como jogador.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+        </section>
+
+    
+            
+<section  id="projetos">
+    <h2>Meus Projetos</h2>
+
+<div class="lista-projetos">
+
+    <div class="card-projeto">
+        <h3>💻 Meu Portfólio</h3>
+
+        <p>
+            Meu primeiro site pessoal, desenvolvido
+            com HTML, CSS e JavaScript.
+            Possui animações, modo responsivo
+            e efeitos interativos.
+        </p>
+
+        <p><strong>Tecnologias:</strong>
+            HTML, CSS e JavaScript
+        </p>
+
+        <a href="index.html" class="botao">
+            Ver projeto
+        </a>
+    </div>
+
+    <div class="card-projeto">
+        <h3>📋 Lista de Tarefas</h3>
+
+        <p>
+            Meu próximo projeto será um aplicativo
+            para organizar tarefas do dia a dia.
+        </p>
+
+        <p><strong>Tecnologias previstas:</strong>
+            HTML, CSS e JavaScript
+        </p>
+
+        <span class="em-breve">Em desenvolvimento</span>
+    </div>
+
+</div>
+<p class="github-projetos">
+    Veja meus códigos no GitHub:
+</p>
+
+<a
+    href="https://github.com/be664659-ui"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="botao"
+>
+    💻 Meu GitHub
+</a>
+</section>
+
+        </section>
+
+        <section id="contato">
+            
+<section id="contato">
+    <h2>📱 Entre em contato</h2>
+
+    <p>
+        Quer conhecer meus projetos ou conversar
+        sobre programação? Veja meus contatos!
+    </p>
+
+    <div class="contato-container">
+
+        <a href="https://github.com/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contato-botao">
+            💻 Meu GitHub
+        </a>
+
+        <a href="mailto:seuemail@exemplo.com"
+           class="contato-botao">
+            📧 be664659@gmail.com
+        </a>
+
+        <a href="#contato"
+           class="contato-botao">
+            📱 WhatsApp (69992716318)
+        </a>
+
+    </div>
+</section>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Meu Portfólio - 2026</p>
+    </footer>
+
+<button id="voltar-topo" aria-label="Voltar ao topo">
+    ↑
+</button>
+<script src="script.js"></script>
+
+
+
+
+
 </body>
 </html>
