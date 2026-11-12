@@ -198,3 +198,33 @@ function digitar() {
 if (textoDigitando) {
     digitar();
 }
+
+// - ORÇAMENTO PELO WHATSAPP
+
+const formularioOrcamento =
+    document.getElementById("form-orcamento");
+
+if (formularioOrcamento) {
+
+    formularioOrcamento.addEventListener("submit", function(evento) {
+        evento.preventDefault();
+
+        const nome = document.getElementById("nome-cliente").value.trim();
+        const servico = document.getElementById("tipo-site").value;
+
+        if (!nome || !servico) return;
+
+        const mensagem =
+            `Olá! Meu nome é ${nome} e gostaria de solicitar um orçamento para ${servico}.`;
+
+       
+        const numeroWhatsApp = "5569992716318";
+
+        const link =
+            `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+
+        window.open(link, "_blank", "noopener,noreferrer");
+
+    });
+
+}

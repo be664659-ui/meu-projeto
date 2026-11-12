@@ -805,3 +805,523 @@ header nav {
     flex-wrap: wrap;
     gap: 20px;
 }
+
+/* AULA 31 - MEUS SERVIÇOS */
+
+#servicos {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+#servicos h2 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.descricao-servicos {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.lista-servicos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card-servico {
+    min-width: 0;
+    padding: 30px 20px;
+    background: #15243b;
+    border: 1px solid #294b70;
+    border-radius: 15px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card-servico:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
+}
+
+.card-servico h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.card-servico p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .lista-servicos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card-servico {
+        transition: none;
+    }
+}
+
+/* AULA 32 - FORMULÁRIO DE ORÇAMENTO */
+
+.formulario-orcamento {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #15243b;
+    border: 1px solid #294b70;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.formulario-orcamento h3 {
+    color: #38bdf8;
+    margin-bottom: 25px;
+}
+
+#form-orcamento {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-orcamento label {
+    text-align: left;
+    font-weight: bold;
+}
+
+#form-orcamento input,
+#form-orcamento select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    background: #0f172a;
+    color: white;
+    font-size: 16px;
+}
+
+#form-orcamento input:focus,
+#form-orcamento select:focus {
+    outline: 2px solid #38bdf8;
+    outline-offset: 2px;
+}
+
+#form-orcamento button {
+    margin-top: 10px;
+}
+
+/* AULA 35 - DESIGN PROFISSIONAL */
+
+/* Cores principais */
+:root {
+    --fundo: #080f1e;
+    --cartao: #14233b;
+    --azul: #38bdf8;
+    --texto: #f8fafc;
+}
+
+/* Fundo moderno */
+body {
+    background: linear-gradient(
+        135deg,
+        #080f1e,
+        #101d35,
+        #07111f
+    );
+    color: var(--texto);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 56px);
+}
+
+h2 {
+    font-size: clamp(25px, 3vw, 36px);
+}
+
+/* Botões modernos */
+button,
+.botao,
+.botao-projeto {
+    background: linear-gradient(
+        135deg,
+        #0284c7,
+        #38bdf8
+    );
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+button:hover,
+.botao:hover,
+.botao-projeto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(56,189,248,0.35);
+}
+
+/* Cartões de serviços e projetos */
+.card-servico,
+.card-projeto,
+.formulario-orcamento {
+    background: rgba(20,35,59,0.9);
+    border: 1px solid rgba(56,189,248,0.25);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Melhor espaçamento */
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Animação ao abrir o site */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    main {
+        animation: aparecer 0.7s ease;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button,
+    .botao,
+    .botao-projeto {
+        transition: none;
+    }
+}
+
+/* AULA 36 - CABEÇALHO MODERNO */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 20px 5%;
+    background: rgba(8, 15, 30, 0.95);
+    border-bottom: 1px solid #38bdf8;
+}
+
+header h2 {
+    color: #38bdf8;
+    font-size: 24px;
+    margin: 0;
+}
+
+#menu-navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+}
+
+#menu-navegacao a {
+    color: #f8fafc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#menu-navegacao a:hover {
+    color: #38bdf8;
+}
+
+/* Botão de mudar tema */
+
+header .botao-tema {
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+/* Menu para celular */
+
+@media (max-width: 900px) {
+    header {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    #menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    #menu-navegacao {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        order: 3;
+    }
+
+    #menu-navegacao.ativo,
+    #menu-navegacao.aberto,
+    #menu-navegacao.active {
+        display: flex;
+    }
+
+    header .botao-tema {
+        order: 2;
+    }
+}
+
+@media (min-width: 901px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    #menu-navegacao {
+        display: flex;
+    }
+}
+
+/* CORREÇÃO DO CABEÇALHO - AULA 36 */
+
+@media (min-width: 1100px) {
+    body > header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 18px;
+        padding: 18px 3%;
+        width: 100%;
+    }
+
+    body > header h2 {
+        margin: 0;
+        font-size: 22px;
+        white-space: nowrap;
+    }
+
+    body > header #menu-navegacao {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: auto;
+        flex: 1;
+        justify-content: center;
+        gap: 16px;
+        padding: 0;
+        margin: 0;
+    }
+
+    body > header #menu-navegacao a {
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+    body > header .botao-tema {
+        width: auto;
+        flex-shrink: 0;
+        margin: 0;
+    }
+}
+
+/* =================================
+   AULA 37 - REDESIGN DO PORTFÓLIO
+================================= */
+
+/* IDENTIDADE VISUAL */
+
+:root {
+    --azul-principal: #38bdf8;
+    --azul-forte: #0284c7;
+    --fundo-escuro: #080f1e;
+    --fundo-card: #14233b;
+    --texto-principal: #f8fafc;
+    --texto-secundario: #cbd5e1;
+}
+
+/* FUNDO DO SITE */
+
+body {
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(14, 165, 233, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #080f1e,
+            #101b30,
+            #080f1e
+        );
+
+    color: var(--texto-principal);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* TÍTULOS DAS SEÇÕES */
+
+main section h2 {
+    color: var(--azul-principal);
+    letter-spacing: 0.5px;
+}
+
+/* CARTÕES MODERNOS */
+
+main section {
+    border-radius: 22px;
+}
+
+.card-servico,
+.card-projeto,
+.formulario-orcamento {
+    background: linear-gradient(
+        145deg,
+        rgba(30, 48, 78, 0.95),
+        rgba(13, 24, 43, 0.95)
+    );
+
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.card-servico:hover,
+.card-projeto:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(56, 189, 248, 0.7);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+/* BOTÕES */
+
+.botao,
+.botao-projeto,
+#form-orcamento button {
+    background: linear-gradient(
+        135deg,
+        #0284c7,
+        #38bdf8
+    );
+
+    color: white;
+    border-radius: 12px;
+    border: none;
+
+    font-weight: 600;
+    text-decoration: none;
+
+    box-shadow:
+        0 5px 20px rgba(56, 189, 248, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.botao:hover,
+.botao-projeto:hover,
+#form-orcamento button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(56, 189, 248, 0.35);
+}
+
+/* CAMPOS DO FORMULÁRIO */
+
+#form-orcamento input,
+#form-orcamento select {
+    background: #0b1527;
+    color: #ffffff;
+
+    border: 1px solid #334155;
+    border-radius: 10px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#form-orcamento input:focus,
+#form-orcamento select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+}
+
+/* LINKS DO MENU */
+
+#menu-navegacao a {
+    transition: color 0.3s ease;
+}
+
+#menu-navegacao a:hover {
+    color: #38bdf8;
+}
+
+/* RODAPÉ */
+
+footer {
+    border-top: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+    .card-servico,
+    .card-projeto,
+    .botao,
+    .botao-projeto,
+    #form-orcamento button {
+        transition: none;
+    }
+}
